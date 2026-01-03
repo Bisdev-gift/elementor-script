@@ -1,0 +1,59 @@
+/* Bundle: elementor-snippets.css
+   Gabungan:
+   - ANTI CUBIT
+   - FOTO
+   - EFEK MASUK DULU CSS
+   - CSS JARAK BUTTON & TEKS
+   - RES DEKSTOP
+   - EFEK MASUK BARU (reveal.css)
+*/
+
+/* ANTI CUBIT */
+body { touch-action: pan-x pan-y; }
+
+/* FOTO */
+.acara img{width:100%;height:auto;object-fit:cover;object-position:top center;image-rendering:high-quality;-webkit-transform:scale(1);transform:scale(1)}
+.profil img{width:180px;height:270px;object-fit:cover;object-position:top center;image-rendering:high-quality;-webkit-transform:scale(1);transform:scale(1)}
+.acara2 img{width:220px;height:320px;object-fit:cover;object-position:top center;image-rendering:high-quality;-webkit-transform:scale(1);transform:scale(1)}
+.roll img{width:250px;height:250px;object-fit:cover;object-position:top center;image-rendering:high-quality;-webkit-transform:scale(1);transform:scale(1)}
+
+/* EFEK MASUK DULU (Legacy CSS) */
+.reveal,.revealin,.revealkanan,.revealkiri,.revealatas,.revealr{position:relative;opacity:0;transition:2s all ease}
+.reveal{transform:translateY(6rem) scale(.93)}
+.reveal.active{transform:translateY(0);opacity:1}
+.revealin{transform:translateY(0rem) scale(0)}
+.revealin.active{transform:translateY(0);opacity:1}
+.revealkanan{transform:translate(6rem) scale(.93)}
+.revealkanan.active{transform:translate(0);opacity:1}
+.revealkiri{transform:translate(-6rem) scale(.93)}
+.revealkiri.active{transform:translate(0);opacity:1}
+.revealatas{transform:translateY(-6rem) scale(.93)}
+.revealatas.active{transform:translateY(0);opacity:1}
+.revealr{transform:rotateY(180deg)}
+.revealr.active{transform:translateY(0);opacity:1}
+
+/* CSS JARAK BUTTON & TEKS */
+.elementor-button-wrapper{margin-top:10px;margin-bottom:10px}
+p{margin-top:0;margin-bottom:0}
+.elementor-widget-weddingpress-copy-text{margin:10px 0 0 0!important}
+
+/* RES DEKSTOP */
+#desk_cov{left:0;top:0;width:calc(100% - 500px);height:100vh;overflow:hidden}
+.ajaibfixed .elementor-background-overlay{position:fixed!important;top:0!important;left:calc(100% - 500px)!important;width:500px!important;pointer-events:none}
+@media (max-width:500px){#desk_cov{display:none}}
+@media (max-width:900px) and (min-width:768px){#desk_cov{width:50%}#isi{margin-left:50%;width:50%}.ajaibfixed .elementor-background-overlay{left:50%!important;width:50%!important}}
+@media (max-width:768px){#desk_cov{display:none}#isi{margin-left:auto;margin-right:auto;width:100%}.ajaibfixed .elementor-background-overlay{left:0!important;width:100%!important}}
+body{overflow-x:hidden!important}
+html{scroll-behavior:auto!important}
+@media (min-width:990px){::-webkit-scrollbar{width:10px}::-webkit-scrollbar-track{background-color:#fff0}::-webkit-scrollbar-thumb{background-color:#d6dee1;border-radius:20px;border:2px solid #fff0;background-clip:content-box}::-webkit-scrollbar-thumb:hover{background-color:#a8bbbf}}
+#open{cursor:pointer}
+
+/* EFEK MASUK BARU (reveal.css modern) */
+.reveal, .revealin, .revealkanan, .revealkiri, .revealatas, .revealr{opacity:0;will-change:transform,opacity;transition:900ms all ease}
+.reveal{transform:translateY(48px) scale(.98)}
+.revealin{transform:scale(.92)}
+.revealkanan{transform:translateX(48px) scale(.98)}
+.revealkiri{transform:translateX(-48px) scale(.98)}
+.revealatas{transform:translateY(-48px) scale(.98)}
+.revealr{transform:rotateY(180deg)}
+.reveal.active,.revealin.active,.revealkanan.active,.revealkiri.active,.revealatas.active,.revealr.active{opacity:1;transform:none}
